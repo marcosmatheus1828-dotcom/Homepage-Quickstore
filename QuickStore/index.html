@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuickStore</title>
-    <h1> QuickStore   </h1>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<head>
-
-<link rel="stylesheet" href="style.css">
-</head>
-  
-</form>
 <body>
-    <form action="/buscar" method="GET"></form>
-  <label for="busca">pesquisar no site</label>
-  <input type="search" id="busca" name="q" placeholder=" O que vocé procura?">
-   <button type="submit">buscar</button>
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo">QuickStore</a>
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="index.html" class="nav__active" aria-current="page">Início</a>
+                <a href="cadastro.html">Cadastro</a>
+            </nav>
+        </div>
+    </header>
 
+    <main class="main main--home">
+        <section class="hero" aria-labelledby="hero-titulo">
+            <h1 id="hero-titulo">Bem-vindo à QuickStore</h1>
+            <p>Encontre produtos diversos com praticidade e segurança.</p>
+        </section>
+
+        <form class="search-form" action="/buscar" method="GET" role="search" aria-label="Buscar produtos">
+            <label class="visually-hidden" for="busca">Pesquisar no site</label>
+            <input type="search" id="busca" name="q" placeholder="O que você procura?">
+            <button type="submit" class="btn btn--primary">Buscar</button>
+        </form>
+
+        <a href="cadastro.html" class="btn btn--secondary">Criar conta</a>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 QuickStore. Todos os direitos reservados.</p>
+    </footer>
 </body>
-</html> 
+</html>
