@@ -10,7 +10,7 @@
     --color-primary: #2563eb;
     --color-primary-dark: #1d4ed8;
     --color-bg: #f8fafc;
-    --color-surface: #ffffff;
+    --color-surface: #ffffff0   0;
     --color-text: #0f172a;
     --color-text-muted: #64748b;
     --color-border: #e2e8f0;
@@ -322,4 +322,87 @@ a:hover {
     .search-form {
         flex-direction: column;
     }
+}
+
+--------Cor da loja------
+
+.topo-loja {
+  background-color: #f3f7f3; 
+  padding: 15px 20px;
+  color: #29e903;
+}
+
+
+.corpo-loja {
+  background-color: #f2f5f1; 
+  min-height: 80vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container dos produtos */
+.secao-produtos {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.secao-produtos h2 {
+  margin-bottom: 25px;
+  color: #333333;
+}
+
+/* Card centralizado do fone */
+.card-fone {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 320px;
+  margin: 0 auto; /* Centraliza o card na página */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-fone:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove o sublinhado do link */
+.link-produto {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.img-fone {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.info-fone h3 {
+  margin: 15px 0 8px;
+  font-size: 1.2rem;
+  color: #222222;
+}
+
+.preco-fone {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+/* Botão dentro do card */
+.btn-ver-detalhes {
+  display: inline-block;
+  background-color: #0066cc;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
 }
