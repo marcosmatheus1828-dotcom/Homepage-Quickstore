@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro — QuickStore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="index.html" class="logo">QuickStore</a>
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="index.html">Início</a>
+                <a href="cadastro.html" class="nav__active" aria-current="page">Cadastro</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="auth-card" aria-labelledby="cadastro-titulo">
+            <div class="auth-card__header">
+                <h1 id="cadastro-titulo">Criar conta</h1>
+                <p class="auth-card__subtitle">Cadastre-se para acompanhar pedidos, salvar favoritos e comprar com mais rapidez.</p>
+            </div>
+
+            <form class="auth-form" action="/api/cadastro" method="POST" novalidate>
+                <fieldset class="auth-form__fieldset">
+                    <legend class="auth-form__legend">Dados pessoais</legend>
+
+                    <div class="form-group">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Seu nome completo"
+                            autocomplete="name"
+                            required
+                            minlength="3"
+                            aria-describedby="nome-erro"
+                        >
+                        <span class="form-error" id="nome-erro" role="alert" hidden></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seu@email.com"
+                            autocomplete="email"
+                            required
+                            aria-describedby="email-erro"
+                        >
+                        <span class="form-error" id="email-erro" role="alert" hidden></span>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input
+                                type="tel"
+                                id="telefone"
+                                name="telefone"
+                                placeholder="(00) 00000-0000"
+                                autocomplete="tel"
+                                required
+                                aria-describedby="telefone-erro"
+                            >
+                            <span class="form-error" id="telefone-erro" role="alert" hidden></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input
+                                type="text"
+                                id="cpf"
+                                name="cpf"
+                                placeholder="000.000.000-00"
+                                inputmode="numeric"
+                                required
+                                aria-describedby="cpf-erro"
+                            >
+                            <span class="form-error" id="cpf-erro" role="alert" hidden></span>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="auth-form__fieldset">
+                    <legend class="auth-form__legend">Segurança</legend>
+
+                    <div class="form-group">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Mínimo 8 caracteres"
+                            autocomplete="new-password"
+                            required
+                            minlength="8"
+                            aria-describedby="senha-dica senha-erro"
+                        >
+                        <span class="form-hint" id="senha-dica">Use letras, números e pelo menos um caractere especial.</span>
+                        <span class="form-error" id="senha-erro" role="alert" hidden></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmar-senha">Confirmar senha</label>
+                        <input
+                            type="password"
+                            id="confirmar-senha"
+                            name="confirmar_senha"
+                            placeholder="Repita a senha"
+                            autocomplete="new-password"
+                            required
+                            aria-describedby="confirmar-senha-erro"
+                        >
+                        <span class="form-error" id="confirmar-senha-erro" role="alert" hidden></span>
+                    </div>
+                </fieldset>
+
+                <fieldset class="auth-form__fieldset auth-form__fieldset--checkboxes">
+                    <legend class="visually-hidden">Preferências e termos</legend>
+
+                    <label class="checkbox">
+                        <input type="checkbox" id="termos" name="termos" required aria-describedby="termos-erro">
+                        <span>Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a></span>
+                    </label>
+                    <span class="form-error" id="termos-erro" role="alert" hidden></span>
+
+                    <label class="checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter" value="sim">
+                        <span>Quero receber ofertas e novidades por e-mail</span>
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="btn btn--primary">Criar conta</button>
+            </form>
+
+            <p class="auth-card__footer">
+                Já tem uma conta? <a href="login.html">Entrar</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 QuickStore. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="cadastro.js"></script>
+</body>
+</html>
